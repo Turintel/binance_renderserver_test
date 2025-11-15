@@ -25,7 +25,7 @@ app.get('/api/klines', async (req, res) => {
   try {
     // We use the built-in 'fetch' (available in Node 18+)
     const response = await fetch(binanceURL);
-    if (!response..ok) {
+    if (!response.ok) {
       throw new Error(`Binance API Error: ${response.status} ${response.statusText}`);
     }
     
